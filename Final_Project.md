@@ -1,9 +1,4 @@
----
-output:
-  html_document:
-    keep_md: yes
-    toc: yes
----
+
 Kiva Crowdfunding by Mohamed El-Sayyad
 ======================================
 
