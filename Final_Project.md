@@ -1,3 +1,11 @@
+---
+md_document:
+    toc: true
+    toc_depth: 3
+  html_document:
+    toc: true
+    toc_depth: 3
+---
 
 Kiva Crowdfunding by Mohamed El-Sayyad
 ======================================
