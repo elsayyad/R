@@ -33,16 +33,6 @@ https://www.kiva.org
 
 ***
 
----
-title: "Table of Contents"
-output: 
-  html_document:
-    toc: true
-    toc_depth: 1
-    toc_float: true
----
-
-
 ```r
 ## packages ##
 
