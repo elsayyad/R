@@ -1214,6 +1214,28 @@ Notes:
 - Top borrower countries by loan count and sector type.
 - Agriculture is the most dominating sector, followed by food.
 
+```r
+
+# To change plot order of bars, change levels in underlying factor
+reorder_size <- function(x) {
+  factor(x, levels = names(sort(table(x))))
+}
+
+frequent_loans <- kiva_df[kiva_df$country_code %in% head(country_ordered$country,10),][c(3,5,7)]
+
+colourCount = length(unique(kiva_df$sector))
+getPalette = colorRampPalette(brewer.pal(9, "Set3"))
+
+Top_Countries_Granting_Loans <- ggplot(frequent_loans, aes(reorder_size(country_code))) +
+  geom_bar(aes(fill=factor(sector)), width = 0.8, col='black') + theme(axis.text.x = element_text(angle=65, vjust=0.6)) +
+  xlab("country")  + 
+  scale_fill_manual(values = getPalette(colourCount)) +
+  ggtitle(" Top Countries granting loans by Sectors")  +
+  theme(plot.title = element_text(hjust = 0.5))  
+
+Top_Countries_Granting_Loans
+```
+
 ![](Final_Project_files/figure-html/Viz_16countries_loan_by_sector-1.png)<!-- -->
 
 ***
